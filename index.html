@@ -1,0 +1,215 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <div class="header">
+        
+        <button class="previous" onclick="previousStep()">Previous</button>
+        <div class="title">ASSURANCE LEGAL</div>
+        <button class="exit" onclick="exitInterview()">Exit Interview</button>
+    </div>
+    
+    <div class="progress-container">
+        
+        
+        <div class="progress-bar" id="loader1"></div>
+        <div class="progress-bar" id="loader2"></div>
+        <div class="progress-bar" id="loader3"></div>
+        <div class="progress-bar" id="loader4"></div>
+    </div>
+    <div class="question-indicator" id="questionIndicator">QUESTION 1 / 4</div>
+                </div>
+    
+    
+    
+    <div id="form-wrapper">
+        <!-- Page 1 -->
+        <div class="form-page" id="page-1">
+            <h2>WHAT ARE YOUR ESTATE PLANNING GOALS?</h2>
+            <p>Select all that apply.</p>
+            <div class="options">
+                <button class="option">Avoid Probate</button>
+                <button class="option">Protect Disabled Adult Child</button>
+                <button class="option">Establish Pet Fund</button>
+                <button class="option">Disinherit Spouse</button>
+                <button class="option">Appoint Guardians for Minor Children</button>
+                <button class="option">Make Charitable Donations</button>
+                <button class="option">Minimize Estate Taxes</button>
+                <button class="option">Asset Protection for Beneficiaries</button>
+            </div>
+            
+            <button class="nav-btn" onclick="nextPage()">Next <i class="fas fa-arrow-right"></i></button>
+            
+        </div>
+        </div>
+        <!-- Page 2 -->
+        <div class="form-page" id="page-2" style="display:none;">
+   
+    <div class="container">
+        <div class="head">
+            <h1>ABOUT YOU</h1>
+            <p>Start by sharing your will-maker's details.</p>
+        </div>
+        
+        <form>
+            <div class="form-row">
+                <div class="form-group">
+                    
+                    <input type="text" placeholder="First Name" id="first-name" name="first-name">
+                </div>
+                <div class="form-group">
+                    
+                    <input type="text" placeholder="MiddleName" id="middle-name" name="middle-name" >
+                </div>
+                <div class="form-group">
+                    
+                    <input type="text" placeholder="Last Name" id="last-name" name="last-name" >
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    
+                    <input type="text" id="age" name="age"  placeholder="Age">
+                </div>
+                <div class="form-group">
+                   
+                    <input type="text" placeholder="Job" id="job" name="job" >
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    
+                    <input type="text" id="address" name="address" >
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" id="city" name="city" >
+                    
+                    
+                </div>
+                <div class="form-group">
+                    
+                    <input type="text" id="state" name="state" >
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    
+                    <input type="text" placeholder="zip" id="zip" name="zip" >
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    
+                   
+                    <input type="text" id="cell-phone" name="cell-phone" placeholder="cell-phone">
+                </div>
+                <div class="form-group">
+                    
+                    <input type="text" id="landline" name="landline" placeholder="landline">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    
+                    
+                    <input type="email " id="email" name="email" placeholder="email">
+                </div>
+            </div>
+            
+        </form>
+        
+                
+            
+    
+        
+     
+        <button class="nav-btn" onclick="nextPage()">Next  <i class="fas fa-arrow-right"></i></button>
+    </div>
+    </div>
+       
+            
+            <div class="form-page" id="page-3" style="display:none;">
+                <h2>YOUR MARITAL STATUS</h2>
+                <p> Start by sharing your marital status.</p>
+                <form id="marital-status-form">
+                    <div class="selection-container">
+                        <div class="selection-option" onclick="selectOption(this)">
+                            <span>Married</span>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                        <div class="selection-option" onclick="selectOption(this)">
+                            <span>Single</span>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                        <div class="selection-option" onclick="selectOption(this)">
+                            <span>Divocered</span>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                        <div class="selection-option" onclick="selectOption(this)">
+                            <span>Widowed</span>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                    </div>
+                </form>
+                    
+                            
+                            
+                            
+                        
+                    </form>
+                    <button class="nav-btn" onclick="nextPage()">Next <i class="fas fa-arrow-right"></i></button>
+                    
+            </div>
+            <!-- Page 4 -->
+            <div class="form-page" id="page-4" style="display:none;">
+                <h2 class="">CHILDERN</h2>
+                <p style="font-size: 16px;" style="color: black;"> Select the number born or adopted by you</p>
+                <form id="dependents-form">
+                    <div class="selection-container">
+                        <div class="selection-option" onclick="selectOption(this)">
+                            <span>None</span>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                        <div class="selection-option" onclick="selectOption(this)">
+                            <span>One</span>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                        <div class="selection-option" onclick="selectOption(this)">
+                            <span>Two</span>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                        <div class="selection-option" onclick="selectOption(this)">
+                            <span>More Than Two</span>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                    </div>
+                    
+                       
+                    
+                </form>
+                <button class="nav-btn" onclick="nextPage()">Next <i class="fas fa-arrow-right"></i></button>
+                    
+                </div>
+                </div>
+            
+        
+        
+
+    <script src="script.js"></script>
+    
+    
+
+    
+</body>
+</html>
